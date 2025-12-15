@@ -47,6 +47,11 @@ public class ClientProfile {
 	//a client can post one to many post
 	@OneToMany(mappedBy = "client")
 	private List<Job> postJob = new ArrayList<>();
+
+	public void setUser(User user2) {
+		// TODO Auto-generated method stub
+		this.user=user2;
+	}
 	
 
 }

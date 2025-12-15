@@ -56,5 +56,9 @@ public class WorkerProfile {
 		//worker can post many jobApplication
 		@OneToMany(mappedBy = "worker")
 		private List<JobApplication>jobApplicationd = new ArrayList<>();
+		public void setUser(User user2) {
+			// TODO Auto-generated method stub
+			this.user = user2;
+		}
 		
 }

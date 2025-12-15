@@ -12,21 +12,20 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class Role {
-	public enum RoleType{
-		ROLE_ADMIN,
-        ROLE_CLIENT, 
-        ROLE_WORKER,
-        ROLE_SUPER_ADMIN
-	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@NotBlank
-	@Column(nullable = false, unique = true)
-	@Enumerated(EnumType.STRING)
-	private RoleType name;
+	@Column( unique = true)
+	private String name;
 	
 	private String description;
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
 
 }
